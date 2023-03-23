@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PreviewImg = styled.img`
-  height: 100%;
-  align-self: center;
+  height: 70%;
+  align-self: end;
   z-index: 15;
 `;
 

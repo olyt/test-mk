@@ -2,6 +2,12 @@ import React, { useEffect } from 'react';
 import BasicGrid from './BasicGrid';
 import CharacterIcon from '../CharacterIcon/CharacterIcon';
 import { arrows } from '../../util/keyboard';
+import styled from 'styled-components';
+
+const StyledCharactersGrid = styled(BasicGrid)`
+  width: 100%;
+  height: 100%;
+`
 
 const CharactersGrid = ({ characters, setCharacters }) => {
     useEffect(() => {
@@ -56,9 +62,9 @@ const CharactersGrid = ({ characters, setCharacters }) => {
     });
 
     return (
-        <BasicGrid columns={5} rows={3}>
+        <StyledCharactersGrid columns={5} rows={3}>
             {listToRender}
-        </BasicGrid>
+        </StyledCharactersGrid>
     );
 };
 

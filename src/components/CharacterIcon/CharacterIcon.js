@@ -30,6 +30,7 @@ const activeStyles = css`
 const ImgWrapper = styled.div`
   box-sizing: border-box;
   position: relative;
+  width: 100%;
 
   ${({ isActive }) => isActive && activeStyles}
 `;

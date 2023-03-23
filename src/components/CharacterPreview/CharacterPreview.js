@@ -1,8 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const PreviewImg = styled.img`
+  height: 100%;
+  align-self: center;
+  z-index: 15;
+`;
 
 const CharacterPreview = ({ src }) => {
     return (
-        <img src={src} alt="MK Fighter"/>
+        <PreviewImg src={src} alt="MK Fighter"/>
     );
 };
 

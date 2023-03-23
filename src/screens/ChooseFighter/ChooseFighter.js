@@ -3,6 +3,7 @@ import CharactersGrid from '../../components/Grid/CharactersGrid';
 import CharacterPreview from '../../components/CharacterPreview/CharacterPreview';
 import characterPointer from '../../util/characterPointer';
 import { returnKey } from '../../util/keyboard';
+import { ChooseFighterWrapper, FightersWrapper, HeaderText, KombatZoneText } from './styles';
 
 const ChooseFighter = ({ setChosenCharacter }) => {
     const [characters, setCharacters] = useState(characterPointer.map((character, index) => {
@@ -34,17 +35,17 @@ const ChooseFighter = ({ setChosenCharacter }) => {
     });
 
     return (
-        <div>
-            <h2>SELECT YOUR FIGHTER</h2>
-            <div>
+        <ChooseFighterWrapper>
+            <HeaderText>SELECT YOUR FIGHTER</HeaderText>
+            <FightersWrapper rows={1}>
                 <CharacterPreview src={activeCharacter.presentation}/>
                 <CharactersGrid characters={characters}
                                 setCharacters={setCharacters}
                                 setChosenCharacter={setChosenCharacter}
                 />
-            </div>
-            <span>KOMBAT ZONE: SOUL CHAMBER</span>
-        </div>
+            </FightersWrapper>
+            <KombatZoneText>KOMBAT ZONE: SOUL CHAMBER</KombatZoneText>
+        </ChooseFighterWrapper>
     );
 };
 

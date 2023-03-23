@@ -57,7 +57,7 @@ const characterPointer = [
     },
     {
         icon: '/img/characters/icons/subzero.gif',
-        presentation: '/img/characters/presentations/subzero.gif'
+        presentation: '/img/characters/presentations/subzero.png'
     },
 ];
 

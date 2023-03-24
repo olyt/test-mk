@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import ChooseFighter from './screens/ChooseFighter/ChooseFighter';
 import { useState } from 'react';
+import VersusScreen from './screens/VersusScreen/VersusScreen';
 
 const AppWrapper = styled.div`
   width: 100vw;
@@ -13,7 +14,7 @@ const App = () => {
         <AppWrapper>
             {
                 chosenCharacter
-                    ? 'versus screen placeholder'
+                    ? <VersusScreen character={chosenCharacter.versus}/>
                     : <ChooseFighter setChosenCharacter={setChosenCharacter}/>
             }
         </AppWrapper>

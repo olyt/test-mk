@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import BasicGrid from './BasicGrid';
-import CharacterIcon from '../CharacterIcon/CharacterIcon';
+import CharacterIcon from '../Images/CharacterIcon';
 import { arrows } from '../../util/keyboard';
 import styled from 'styled-components';
 

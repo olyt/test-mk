@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import BasicImage from './BasicImage';
 
 const activeStyles = css`
   &::before {
@@ -35,14 +36,10 @@ const ImgWrapper = styled.div`
   ${({ isActive }) => isActive && activeStyles}
 `;
 
-const CharacterImage = styled.img`
-  width: 100%;
-`;
-
 const CharacterIcon = ({ iconSrc, isActive }) => {
     return (
         <ImgWrapper isActive={isActive}>
-            <CharacterImage src={iconSrc} alt="MK Fighter"/>
+            <BasicImage src={iconSrc} width="100%" alt="MK Fighter"/>
         </ImgWrapper>
     );
 };

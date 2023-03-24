@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import CharactersGrid from '../../components/Grid/CharactersGrid';
-import CharacterPreview from '../../components/CharacterPreview/CharacterPreview';
+import CharactersGrid from '../../components/Grids/CharactersGrid';
+import CharacterPreview from '../../components/Images/CharacterPreview';
 import characterPointer from '../../util/characterPointer';
 import { returnKey } from '../../util/keyboard';
 import { ChooseFighterWrapper, FightersWrapper, HeaderText, KombatZoneText } from './styles';
@@ -32,19 +32,19 @@ const ChooseFighter = ({ setChosenCharacter }) => {
             window.removeEventListener('keyup', onReturnKey);
             clearTimeout(timerRef.current);
         };
-    }, []);
+    }, [activeCharacter, setChosenCharacter]);
 
     return (
         <ChooseFighterWrapper>
-            <HeaderText>SELECT YOUR FIGHTER</HeaderText>
+            <HeaderText>select your fighter</HeaderText>
             <FightersWrapper rows={1}>
-                <CharacterPreview src={activeCharacter.presentation}/>
+                <CharacterPreview src={activeCharacter.presentation} height="70%" alt="MK Fighter"/>
                 <CharactersGrid characters={characters}
                                 setCharacters={setCharacters}
                                 setChosenCharacter={setChosenCharacter}
                 />
             </FightersWrapper>
-            <KombatZoneText>KOMBAT ZONE: SOUL CHAMBER</KombatZoneText>
+            <KombatZoneText>kombat zone: soul chamber</KombatZoneText>
         </ChooseFighterWrapper>
     );
 };

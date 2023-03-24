@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import BasicGrid from '../../components/Grid/BasicGrid';
+import BasicGrid from '../../components/Grids/BasicGrid';
 
 const textMixin = css`
   text-transform: uppercase;

@@ -9,7 +9,7 @@ const AppWrapper = styled.div`
 `;
 
 const App = () => {
-    const [chosenCharacter, setChosenCharacter] = useState('');
+    const [chosenCharacter, setChosenCharacter] = useState(null);
     return (
         <AppWrapper>
             {

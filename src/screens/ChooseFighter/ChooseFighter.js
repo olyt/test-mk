@@ -32,7 +32,7 @@ const ChooseFighter = ({ setChosenCharacter }) => {
             window.removeEventListener('keyup', onReturnKey);
             clearTimeout(timerRef.current);
         };
-    });
+    }, []);
 
     return (
         <ChooseFighterWrapper>
